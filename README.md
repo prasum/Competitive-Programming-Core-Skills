@@ -1,1 +1,1 @@
-# Competitive-Programming-Core-Skills
+# Coursera Competitive-Programming-Core-Skills
