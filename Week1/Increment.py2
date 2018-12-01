@@ -1,0 +1,6 @@
+num = raw_input()
+length = len(num)
+if num == '9' * length: # checks if string is all 9's
+    print(length + 1)
+else:
+    print(length)

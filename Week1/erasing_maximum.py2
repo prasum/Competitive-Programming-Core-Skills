@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+
+import sys
+
+def main():
+    n = int(raw_input())
+    a = raw_input().split()
+    for q in xrange(len(a)):
+        a[q]=int(a[q])
+        
+    m=max(a)
+    p=[i for i, j in enumerate(a) if j == m]
+    if len(p)>=3:
+        del a[p[2]]
+    elif len(p)==1:
+        del a[p[0]]
+    
+
+
+    result = []
+    for k in xrange(len(a)):
+        result.append(a[k])
+        
+
+    # your code
+
+    print " ".join([str(num) for num in result])
+
+
+if __name__ == '__main__':
+    main()
