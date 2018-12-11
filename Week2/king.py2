@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+
+import sys
+from math import *
+
+def main():
+
+    p=raw_input().split()
+    for i in xrange(len(p)):
+        p[i]=int(p[i])
+
+    temp=0
+    sum=0
+    r=p[0]
+    c=p[1]
+    if r>c:
+        temp=r
+        r=c
+        c=temp
+        
+    if r<=3 and c<=3:
+        sum=sum+r*c-1
+        print sum
+        
+    else:
+        if (r-2)<0:
+            if (c-2)>2:
+                q=int(ceil(r/3.0))*int(ceil(c/3.0))
+                print r*c-q
+            
+            elif (c-2)==2:
+                q=int(ceil(r/3.0))*int(ceil(c/3.0))
+                print r*c-q
+                
+        elif (r-2)==0:
+            if (c-2)>2:
+                q=int(ceil(r/3.0))*int(ceil(c/3.0))
+                print r*c-q
+                
+            elif (c-2)==2:
+                q=int(ceil(r/3.0))*int(ceil(c/3.0))
+                print r*c-q
+                
+        elif (r-2)>0:
+            if (c-2)<=2 and (r-2)<=2:
+                sum=sum+r+r+c-2+c-2
+                print sum
+            
+            elif (c-2)>2 and (r-2)<=2:
+                q=int(ceil(r/3.0))*int(ceil(c/3.0))
+                print r*c-q
+            elif (c-2)>2 and (r-2)>2:
+                q=int(ceil(r/3.0))*int(ceil(c/3.0))
+                print r*c-q
+                
+        
+            
+
+    
+
+
+if __name__ == '__main__':
+    main()

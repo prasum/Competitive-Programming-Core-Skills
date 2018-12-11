@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+from math import *
+import sys
+
+def main():
+
+    n=input()
+    p=raw_input()
+    q=p.split()
+    for j in xrange(len(q)):
+        q[j]=float(q[j])
+    suma=sum(q)
+    suma=round(suma,3)
+    s=raw_input()
+    t=s.split()
+    for j in xrange(len(t)):
+        t[j]=float(t[j])
+    sumb=sum(t)
+    sumb=round(sumb,3)
+    if suma==sumb:
+        print "SUM(A)=SUM(B)"
+    elif suma<sumb:
+        print "SUM(A)<SUM(B)"
+    else:
+        print "SUM(A)>SUM(B)"
+        
+    
+    
+
+
+if __name__ == '__main__':
+    main()

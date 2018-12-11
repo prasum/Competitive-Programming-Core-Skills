@@ -1,0 +1,14 @@
+from math import *
+sump=0.0000000000
+sumq=0
+n=input()
+p=raw_input()
+q=p.split()
+for i in xrange(len(q)):
+    q[i]=int(q[i])
+for j in xrange(int(n)):
+    sumq=sumq+q[j]
+    sump=sump+(1.0000000000)/(q[j]*1.0)
+    
+sumb=sumq+sump
+print "%.10f" % sumb

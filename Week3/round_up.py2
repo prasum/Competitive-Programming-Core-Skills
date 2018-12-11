@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+from math import *
+import sys
+
+def main():
+    
+	m=raw_input()
+	n=m.split()
+	for i in xrange(len(n)):
+	    n[i]=float(n[i])
+	x=n[0]
+	y=n[1]
+	c=x/y
+	z=ceil(c)
+	z=int(z)
+	print z
+
+    
+    
+    
+
+if __name__ == '__main__':
+    main()
