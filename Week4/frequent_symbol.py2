@@ -1,0 +1,25 @@
+def buildIntegralDistributions(s):
+    IDs=[]        # integral distribution
+    D=[0]*256
+    IDs.append(D[:])
+    for x in s:
+        D[ord(x)]+=1
+        IDs.append(D[:])
+    return IDs
+
+def getIntervalDistribution(IDs, i,j):
+    D=[0]*256        
+    for k in range(256):
+        D[k]=IDs[j][k]-IDs[i][k]
+        
+    return chr(D.index(max(D)))
+
+s=raw_input()
+IDs=buildIntegralDistributions(s)
+n=int(input())
+for i in xrange(n):
+    y=raw_input().split()
+    l=int(y[0])-1
+    r=int(y[1])
+    Dij=getIntervalDistribution(IDs, l,r)
+    print Dij

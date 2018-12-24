@@ -1,0 +1,23 @@
+p=[]
+q=[]
+n=int(input())
+for i in xrange(n):
+    s=raw_input().split()
+    l=int(s[0])-1
+    r=int(s[1])-1
+    p.append(l)
+    q.append(r)
+c=max(q)+2
+arr=[0]*c
+for j in xrange(n):
+    arr[p[j]]+=1
+    arr[q[j]+1]-=1
+    
+for k in xrange(1,c):
+    if arr[k-1]!=0:
+        arr[k]+=arr[k-1]
+    
+for a in xrange(len(arr)):
+    if arr[a]!=0:
+        print a+1,arr[a]
+    
