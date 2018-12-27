@@ -1,0 +1,13 @@
+n=int(input())
+a=raw_input().split()
+for i in xrange(n):
+    a[i]=int(a[i])
+t=[None]*n
+for j in xrange(len(a)):
+    t[j]=1
+    for k in xrange(j):
+        if a[j]>a[k] and t[j]<t[k]+1:
+            t[j]=t[k]+1
+
+c=max(t)
+print c
